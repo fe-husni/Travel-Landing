@@ -6,14 +6,14 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -21,14 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build the project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
-          publish_branch: gh-pages
-          user_name: fe-husni
-          user_email: husniiimubarok00@gmail.com
+      - name: Deploy manually to gh-pages
+        run: |
+          git config --global user.name "fe-husni"
+          git config --global user.email "husniiimubarok00@gmail.com"
+          git --work-tree dist add --all
+          git --work-tree dist commit -m "Auto Deploy"
+          git push origin HEAD:gh-pages --force
