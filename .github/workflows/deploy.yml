@@ -24,7 +24,7 @@ jobs:
       - name: Build Tailwind
         run: npm run build
 
-      - name: Copy static files
+      - name: Copy index.html to dist
         run: cp ./src/index.html ./dist/index.html
 
       - name: Deploy to GitHub Pages
@@ -32,5 +32,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          publish_branch: gh-pages
           user_name: fe-husni
           user_email: husniiimubarok00@gmail.com
