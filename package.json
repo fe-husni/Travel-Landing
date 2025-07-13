@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify && cp ./src/index.html ./dist/index.html && cp -r ./public/* ./dist/"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify && node copy-assets.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "fs-extra": "^11.3.0",
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
