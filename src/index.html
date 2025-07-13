@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Alpine.Js -->
   <script src="//unpkg.com/alpinejs" defer></script>
@@ -19,12 +21,13 @@
 
   <style>
     @property --num {
-        syntax: '<integer>';
-        initial-value: 0;
-        inherits: false;
+      syntax: '<integer>';
+      initial-value: 0;
+      inherits: false;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -48,22 +51,24 @@
             </li>
           </ul>
         </div>
-        <img @click="navOpen = !navOpen" src="../public/assets/nav-toogle.svg" alt="" class="order-2 sm:order-1 lg:hidden">
+        <img @click="navOpen = !navOpen" src="../public/assets/nav-toogle.svg" alt=""
+          class="order-2 sm:order-1 lg:hidden">
 
         <div class="order-3 hidden sm:block">
-          <button class="grow bg-white px-8 py-4 font-medium text-purple rounded-full text-sm shadow-md hover:bg-stone-50 duration-500">Sign In</button>
-          <button class="grow bg-purple px-8 py-4 font-medium text-white rounded-full text-sm hover:bg-indigo-700 duration-500">Sign Up</button>
+          <button
+            class="grow bg-white px-8 py-4 font-medium text-purple rounded-full text-sm shadow-md hover:bg-stone-50 duration-500">Sign
+            In</button>
+          <button
+            class="grow bg-purple px-8 py-4 font-medium text-white rounded-full text-sm hover:bg-indigo-700 duration-500">Sign
+            Up</button>
         </div>
       </div>
     </div>
-    <div x-show="navOpen" x-data="{open : false}" 
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 scale-90"
-        x-transition:enter-end="opacity-100 scale-100"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 scale-100"
-        x-transition:leave-end="opacity-0 scale-90"
-        class="fixed bottom-0 right-0 left-0 p-4 bg-white border-t-2 lg:hidden z-10">
+    <div x-show="navOpen" x-data="{open : false}" x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+      x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
+      x-transition:leave-end="opacity-0 scale-90"
+      class="fixed bottom-0 right-0 left-0 p-4 bg-white border-t-2 lg:hidden z-10">
       <ul class="flex justify-evenly">
         <li>
           <a href="" class="flex justify-center flex-col items-center gap-1 text-purple">
@@ -97,16 +102,17 @@
         </li>
       </ul>
 
-      <div x-show="open"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 scale-90"
-          x-transition:enter-end="opacity-100 scale-100"
-          x-transition:leave="transition ease-in duration-300"
-          x-transition:leave-start="opacity-100 scale-100"
-          x-transition:leave-end="opacity-0 scale-90"
-          class="absolute bottom-28 left-1/2 -translate-x-1/2 w-3/4 flex gap-4">
-        <button class="grow bg-white px-8 py-4 font-medium text-purple rounded-full text-sm shadow-md hover:bg-stone-50 duration-500">Sign In</button>
-        <button class="grow bg-purple px-8 py-4 font-medium text-white rounded-full text-sm hover:bg-indigo-700 duration-500">Sign Up</button>
+      <div x-show="open" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
+        class="absolute bottom-28 left-1/2 -translate-x-1/2 w-3/4 flex gap-4">
+        <button
+          class="grow bg-white px-8 py-4 font-medium text-purple rounded-full text-sm shadow-md hover:bg-stone-50 duration-500">Sign
+          In</button>
+        <button
+          class="grow bg-purple px-8 py-4 font-medium text-white rounded-full text-sm hover:bg-indigo-700 duration-500">Sign
+          Up</button>
       </div>
     </div>
   </nav>
@@ -117,21 +123,25 @@
       <div class="grid grid-cols-12 justify-center">
         <div class="col-span-12 lg:col-span-4 order-2 lg:order-1 flex items-center">
           <div class="flex gap-4 lg:gap-6 flex-col items-center lg:items-start">
-            <button class="text-pink font-bold flex gap-4 items-center shadow-sm-shadow rounded-full px-8 py-4 w-max border-[.5px] border-rose-300 border-opacity-50 cursor-text">
+            <button
+              class="text-pink font-bold flex gap-4 items-center shadow-sm-shadow rounded-full px-8 py-4 w-max border-[.5px] border-rose-300 border-opacity-50 cursor-text">
               Explore The World!
               <img src="../public/assets/icons/bag.svg" alt="">
             </button>
-            <h1 class="text-gray-800 font-bold text-dark text-[40px] lg:text-6xl md:text-[56px] leading-tight text-center lg:text-left">
+            <h1
+              class="text-gray-800 font-bold text-dark text-[40px] lg:text-6xl md:text-[56px] leading-tight text-center lg:text-left">
               Travel <span class="text-pink">Top Destination</span> of The World
             </h1>
             <p class="text-grey text-center lg:text-left mt-2 text-base md:text-lg md:w-3/4">
               We always make our customer happy by providing as many choices as possible
             </p>
             <div class="w-full flex flex-col md:flex-row gap-6 mt-8 lg:mt-0 justify-center lg:justify-start">
-              <button class="bg-purple text-white text-sm font-bold font-circular  px-8 py-6 md:py-4 lg:py-4 rounded-full w-full md:w-max shadow-xl tracking-wider hover:bg-indigo-700 duration-500 hover:shadow-violet-300">
+              <button
+                class="bg-purple text-white text-sm font-bold font-circular  px-8 py-6 md:py-4 lg:py-4 rounded-full w-full md:w-max shadow-xl tracking-wider hover:bg-indigo-700 duration-500 hover:shadow-violet-300">
                 Get Started
               </button>
-              <button class="bg-white text-dark text-sm font-bold font-circular px-8 py-6 md:py-4 lg:py-4 rounded-full w-full md:w-max flex gap-2 justify-center border-[#EEEEEE75] border-[1px] tracking-wider hover:border-purple hover:border-2 duration-500">
+              <button
+                class="bg-white text-dark text-sm font-bold font-circular px-8 py-6 md:py-4 lg:py-4 rounded-full w-full md:w-max flex gap-2 justify-center border-[#EEEEEE75] border-[1px] tracking-wider hover:border-purple hover:border-2 duration-500">
                 <img src="../public/assets/icons/play.svg" alt="">
                 Watch Demo
               </button>
@@ -169,31 +179,37 @@
 
         <div class=" flex gap-6 justify-center flex-wrap">
 
-          <div class="bg-white flex flex-col justify-center items-center gap-12 w-[300px] rounded-3xl border px-8 py-16 hover:drop-shadow-2xl hover:duration-700 hover:ease-in-out">
+          <div
+            class="bg-white flex flex-col justify-center items-center gap-12 w-[300px] rounded-3xl border px-8 py-16 hover:drop-shadow-2xl hover:duration-700 hover:ease-in-out">
             <div>
               <img src="../public/assets/icons/destination.png" alt="">
             </div>
             <div class="flex flex-col gap-4">
               <h2 class="text-gray-800 font-Circular text-xl font-bold text-center">Best Tour Guide</h2>
-              <p class="text-gray-500 text-lg leading-relaxed text-center">What looked like a small patch of purple grass, above five feet.</p>
+              <p class="text-gray-500 text-lg leading-relaxed text-center">What looked like a small patch of purple
+                grass, above five feet.</p>
             </div>
           </div>
-          <div class="bg-white flex flex-col justify-center items-center gap-12 w-[300px] rounded-3xl border px-8 py-16 hover:drop-shadow-2xl hover:duration-700 hover:ease-in-out">
+          <div
+            class="bg-white flex flex-col justify-center items-center gap-12 w-[300px] rounded-3xl border px-8 py-16 hover:drop-shadow-2xl hover:duration-700 hover:ease-in-out">
             <div>
               <img src="../public/assets/icons/booking.png" alt="">
             </div>
             <div class="flex flex-col gap-4">
               <h2 class="text-gray-800 font-Circular text-xl font-bold text-center">Easy Booking</h2>
-              <p class="text-gray-500 text-lg leading-relaxed text-center">Square, was moving across the sand in their direction.</p>
+              <p class="text-gray-500 text-lg leading-relaxed text-center">Square, was moving across the sand in their
+                direction.</p>
             </div>
           </div>
-          <div class="bg-white flex flex-col justify-center items-center gap-12 w-[300px] rounded-3xl border px-8 py-16 hover:drop-shadow-2xl hover:duration-700 hover:ease-in-out">
+          <div
+            class="bg-white flex flex-col justify-center items-center gap-12 w-[300px] rounded-3xl border px-8 py-16 hover:drop-shadow-2xl hover:duration-700 hover:ease-in-out">
             <div>
               <img src="../public/assets/icons/cloudy.png" alt="">
             </div>
             <div class="flex flex-col gap-4">
               <h2 class="text-gray-800 font-Circular text-xl font-bold text-center">Weather Forecast</h2>
-              <p class="text-gray-500 text-lg leading-relaxed text-center">What looked like a small patch of purple grass, above five feet.</p>
+              <p class="text-gray-500 text-lg leading-relaxed text-center">What looked like a small patch of purple
+                grass, above five feet.</p>
             </div>
           </div>
 
@@ -204,7 +220,7 @@
   </section>
 
   <!-- Top Destination Section -->
-  
+
 
   <!-- Travel Point Section -->
   <section>
@@ -220,7 +236,8 @@
             <div class=" flex gap-4 flex-col px-4 text-center lg:text-left">
               <span class="text-pink font-bold leading-tight">TRAVEL POINT</span>
               <h1 class="font-bold leading-tight text-4xl text-gray-800">We helping you find your dream location</h1>
-              <p class="text-gray-500 text-lg leading-relaxed">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+              <p class="text-gray-500 text-lg leading-relaxed">Contrary to popular belief, Lorem Ipsum is not simply
+                random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
             </div>
             <div class="flex gap-6 flex-wrap">
               <div class="flex flex-col p-8 items-center gap-4 rounded-2xl bg-white border-[1px] text-center flex-1">
@@ -241,7 +258,7 @@
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -255,11 +272,13 @@
             <div class=" flex gap-4 flex-col px-4 text-center lg:text-left">
               <span class="text-pink font-bold leading-tight">KEY FEATURES</span>
               <h1 class="font-bold leading-tight text-4xl text-gray-800">We offer best services</h1>
-              <p class="text-gray-500 text-lg leading-relaxed">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+              <p class="text-gray-500 text-lg leading-relaxed">Contrary to popular belief, Lorem Ipsum is not simply
+                random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
             </div>
 
             <div class="flex flex-col flex-wrap">
-              <div class="flex flex-col text-center lg:flex-row lg:text-left items-center p-5 gap-5 border-[1.5px] border-white hover:border hover:border-gray-200 rounded-3xl">
+              <div
+                class="flex flex-col text-center lg:flex-row lg:text-left items-center p-5 gap-5 border-[1.5px] border-white hover:border hover:border-gray-200 rounded-3xl">
                 <span class="bg-orange p-6 flex justify-center items-center rounded-2xl">
                   <ion-icon name="location" class="text-white text-2xl"></ion-icon>
                 </span>
@@ -268,7 +287,8 @@
                   <p class="text-sm text-gray-500">Lorem Ipsum is not simply random text</p>
                 </div>
               </div>
-              <div class="flex flex-col text-center lg:flex-row lg:text-left items-center p-5 gap-5 border-[1.5px] border-white hover:border hover:border-gray-200 rounded-3xl">
+              <div
+                class="flex flex-col text-center lg:flex-row lg:text-left items-center p-5 gap-5 border-[1.5px] border-white hover:border hover:border-gray-200 rounded-3xl">
                 <span class="bg-yellow p-6 flex justify-center items-center rounded-2xl">
                   <ion-icon name="calendar" class="text-white text-2xl"></ion-icon>
                 </span>
@@ -277,7 +297,8 @@
                   <p class="text-sm text-gray-500">It has roots in a piece of classical</p>
                 </div>
               </div>
-              <div class="flex flex-col text-center lg:flex-row lg:text-left items-center p-5 gap-5 border-[1.5px] border-white hover:border hover:border-gray-200 rounded-3xl">
+              <div
+                class="flex flex-col text-center lg:flex-row lg:text-left items-center p-5 gap-5 border-[1.5px] border-white hover:border hover:border-gray-200 rounded-3xl">
                 <span class="bg-pink p-6 flex justify-center items-center rounded-2xl">
                   <ion-icon name="ticket" class="text-white text-2xl"></ion-icon>
                 </span>
@@ -302,85 +323,95 @@
   <!-- Footer -->
   <footer class="bg-white dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-              <a href="#" class="flex items-center">
-                  <img src="../public/assets/logo-icon.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
-              </a>
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="flex items-center">
+            <img src="../public/assets/logo-icon.svg" class="h-8 me-3" alt="FlowBite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-xl font-semibold text-gray-900 font-Circular dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
+              <li>
+                <a href="#" class="hover:underline">About</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Career</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Mobile</a>
+              </li>
+            </ul>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
-                  <h2 class="mb-6 text-xl font-semibold text-gray-900 font-Circular dark:text-white">Company</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
-                      <li>
-                          <a href="#" class="hover:underline">About</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Career</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Mobile</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-xl font-semibold text-gray-900 font-Circular dark:text-white">Contact</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
-                      <li>
-                          <a href="#" class="hover:underline ">Why Travlog?</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Partner with us</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">FAQ's</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Blog</a>
-                      </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-xl font-semibold text-gray-900 font-Circular dark:text-white">Meet Us</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
-                      <li>
-                          <a href="#" class="hover:underline">0822-7285-7888</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">info@travlog.com</a>
-                      </li>
-                      <li>
-                          <a href="#" class="hover:underline">Jl. Proklamasi No.2, Kab. Gresik</a>
-                      </li>
-                  </ul>
-              </div>
+          <div>
+            <h2 class="mb-6 text-xl font-semibold text-gray-900 font-Circular dark:text-white">Contact</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
+              <li>
+                <a href="#" class="hover:underline ">Why Travlog?</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Partner with us</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">FAQ's</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Blog</a>
+              </li>
+            </ul>
           </div>
+          <div>
+            <h2 class="mb-6 text-xl font-semibold text-gray-900 font-Circular dark:text-white">Meet Us</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
+              <li>
+                <a href="#" class="hover:underline">0822-7285-7888</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">info@travlog.com</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Jl. Proklamasi No.2, Kab. Gresik</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://husni-mubarok.my.id/" class="hover:underline">Husni Mubarok</a>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-                    </svg>
-                  <span class="sr-only">Facebook page</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                </svg>
-                  <span class="sr-only">Twitter page</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="sr-only">GitHub account</span>
-              </a>
-          </div>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+            href="https://husni-mubarok.my.id/" class="hover:underline">Husni Mubarok</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 8 19">
+              <path fill-rule="evenodd"
+                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 17">
+              <path fill-rule="evenodd"
+                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Twitter page</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">GitHub account</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -391,4 +422,5 @@
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>
